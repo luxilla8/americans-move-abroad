@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Americans Move Abroad — Directory for Starting a New Life Overseas</title>
+<meta name="description" content="Researched relocation profiles for 20 countries — visa pathways, cost of living, healthcare, and more. Built for professionals 40+.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-size: var(--text-base);
+}
+img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+input, button, textarea, select { font: inherit; color: inherit; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; line-height: 1.15; font-family: 'Libre Baskerville', Georgia, serif; }
+p, li, figcaption { text-wrap: pretty; max-width: 72ch; }
+button { cursor: pointer; background: none; border: none; }
+::selection { background: rgba(46, 139, 87, 0.2); color: var(--color-text); }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ========== DESIGN TOKENS ========== */
+:root {
+  /* Type scale */
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.9rem  + 0.5vw,  1.125rem);
+  --text-lg:   clamp(1.125rem, 0.95rem + 0.85vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1rem    + 1.5vw,  2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+
+  /* Spacing */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Radius */
+  --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
+  --radius-xl: 1rem; --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-golden: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Content widths */
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+}
+
+/* ========== LIGHT MODE (DEFAULT) ========== */
+:root, [data-theme="light"] {
+  --color-bg: #faf8f4;
+  --color-surface: #ffffff;
+  --color-surface-2: #f5f3ef;
+  --color-surface-offset: #f0ede8;
+  --color-divider: #e0dcd5;
+  --color-border: #d4d0c8;
+  --color-text: #1a2744;
+  --color-text-muted: #5a6478;
+  --color-text-faint: #9aa0ad;
+  --color-text-inverse: #faf8f4;
+  --color-accent: #2e8b57;
+  --color-accent-hover: #246d45;
+  --color-accent-light: rgba(46, 139, 87, 0.1);
+  --color-accent-2: #6b7f6b;
+  --color-accent-2-light: rgba(107, 127, 107, 0.1);
+  --color-navy: #1a2744;
+  --color-navy-light: rgba(26, 39, 68, 0.06);
+  --shadow-sm: 0 1px 3px rgba(26, 39, 68, 0.06);
+  --shadow-md: 0 4px 12px rgba(26, 39, 68, 0.08);
+  --shadow-lg: 0 12px 32px rgba(26, 39, 68, 0.12);
+  --shadow-card: 0 1px 3px rgba(26, 39, 68, 0.05), 0 1px 2px rgba(26, 39, 68, 0.03);
+  --shadow-card-hover: 0 8px 24px rgba(26, 39, 68, 0.1), 0 2px 4px rgba(26, 39, 68, 0.05);
+}
+
+/* ========== DARK MODE ========== */
+[data-theme="dark"] {
+  --color-bg: #141a26;
+  --color-surface: #1c2333;
+  --color-surface-2: #242c3d;
+  --color-surface-offset: #1e2636;
+  --color-divider: #2a3345;
+  --color-border: #354052;
+  --color-text: #e2e0dc;
+  --color-text-muted: #97a0b0;
+  --color-text-faint: #5e687a;
+  --color-text-inverse: #141a26;
+  --color-accent: #4eca89;
+  --color-accent-hover: #3db574;
+  --color-accent-light: rgba(78, 202, 137, 0.12);
+  --color-accent-2: #8fa98f;
+  --color-accent-2-light: rgba(143, 169, 143, 0.12);
+  --color-navy: #c4ccd9;
+  --color-navy-light: rgba(196, 204, 217, 0.06);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #141a26;
+    --color-surface: #1c2333;
+    --color-surface-2: #242c3d;
+    --color-surface-offset: #1e2636;
+    --color-divider: #2a3345;
+    --color-border: #354052;
+    --color-text: #e2e0dc;
+    --color-text-muted: #97a0b0;
+    --color-text-faint: #5e687a;
+    --color-text-inverse: #141a26;
+    --color-accent: #4eca89;
+    --color-accent-hover: #3db574;
+    --color-accent-light: rgba(78, 202, 137, 0.12);
+    --color-accent-2: #8fa98f;
+    --color-accent-2-light: rgba(143, 169, 143, 0.12);
+    --color-navy: #c4ccd9;
+    --color-navy-light: rgba(196, 204, 217, 0.06);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ========== LAYOUT ========== */
+.container {
+  max-width: var(--content-wide);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+@media (min-width: 768px) { .container { padding-inline: var(--space-8); } }
+
+/* ========== HEADER ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  border-bottom: 1px solid var(--color-divider);
+  padding: var(--space-3) 0;
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-logo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  transition: color var(--transition-interactive), background var(--transition-interactive);
+}
+.theme-toggle:hover { color: var(--color-text); background: var(--color-navy-light); }
+
+/* ========== HERO ========== */
+.hero {
+  padding: clamp(var(--space-12), 6vw, var(--space-24)) 0 clamp(var(--space-8), 4vw, var(--space-16));
+  text-align: center;
+}
+.hero h1 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.025em;
+}
+.hero .tagline {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+  font-weight: 400;
+}
+.hero .subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+}
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  padding: var(--space-3) 0;
+}
+.stats-bar span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.stats-bar .stat-sep {
+  display: none;
+}
+@media (min-width: 640px) {
+  .stats-bar .stat-sep { display: inline; color: var(--color-divider); }
+}
+
+/* ========== FILTER BAR ========== */
+.filter-section {
+  position: sticky;
+  top: 52px;
+  z-index: 90;
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  padding: var(--space-4) 0 var(--space-3);
+  border-bottom: 1px solid var(--color-divider);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+}
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.filter-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  transition: all var(--transition-interactive);
+  white-space: nowrap;
+  min-height: 32px;
+}
+.pill:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.pill.active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  border-color: var(--color-accent);
+}
+.search-input {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: var(--text-sm);
+  width: 200px;
+  transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+}
+.search-input:focus { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-light); outline: none; }
+.search-input::placeholder { color: var(--color-text-faint); }
+.result-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-left: auto;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .filter-row { gap: var(--space-2); }
+  .search-input { width: 100%; order: -1; }
+  .result-count { width: 100%; text-align: center; margin-left: 0; }
+  .filter-section { top: 49px; }
+}
+
+/* ========== CARDS GRID ========== */
+.cards-section {
+  padding: var(--space-8) 0 var(--space-16);
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-6);
+}
+@media (min-width: 1024px) {
+  .cards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ========== COUNTRY CARD ========== */
+.country-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: box-shadow var(--transition-interactive), transform var(--transition-interactive), border-color var(--transition-interactive);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  position: relative;
+}
+.country-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+}
+.country-card:active { transform: translateY(0); }
+.country-card.hidden {
+  display: none;
+}
+.country-card.fade-in {
+  animation: cardFadeIn 300ms var(--ease-golden) both;
+}
+@keyframes cardFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.card-flag {
+  width: 40px;
+  height: 30px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+.card-title-area {
+  flex: 1;
+  min-width: 0;
+}
+.card-country-name {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: var(--space-1);
+}
+.card-continent {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--color-accent-2-light);
+  color: var(--color-accent-2);
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2) var(--space-4);
+}
+.card-stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+.card-stat-value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-ease {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.ease-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-divider);
+  transition: background var(--transition-interactive);
+}
+.ease-dot.filled { background: var(--color-accent); }
+
+.card-pro {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  border-top: 1px solid var(--color-divider);
+  padding-top: var(--space-3);
+  flex: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.card-pro strong {
+  color: var(--color-accent-2);
+  font-weight: 600;
+}
+
+.card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  transition: all var(--transition-interactive);
+  background: transparent;
+  width: 100%;
+}
+.card-cta:hover { background: var(--color-accent); color: var(--color-text-inverse); }
+.card-cta svg { width: 14px; height: 14px; }
+
+/* ========== MODAL ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(26, 39, 68, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--space-4);
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms var(--ease-golden);
+}
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+.modal-content {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  max-width: 780px;
+  width: 100%;
+  margin: var(--space-8) auto;
+  position: relative;
+  transform: translateY(24px);
+  transition: transform 350ms var(--ease-golden);
+  box-shadow: var(--shadow-lg);
+}
+.modal-overlay.open .modal-content { transform: translateY(0); }
+
+.modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  z-index: 10;
+  transition: color var(--transition-interactive), background var(--transition-interactive);
+}
+.modal-close:hover { color: var(--color-text); background: var(--color-navy-light); }
+
+.modal-header {
+  padding: var(--space-8) var(--space-8) var(--space-6);
+  border-bottom: 1px solid var(--color-divider);
+}
+.modal-flag { width: 80px; height: 60px; border-radius: 4px; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.15); margin-bottom: var(--space-3); }
+.modal-country-name {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.modal-ease { display: flex; align-items: center; gap: var(--space-1); margin-top: var(--space-2); }
+.modal-ease .ease-label { font-size: var(--text-sm); color: var(--color-text-muted); margin-right: var(--space-2); }
+
+.modal-body {
+  padding: var(--space-6) var(--space-8) var(--space-8);
+}
+.modal-section {
+  margin-bottom: var(--space-8);
+}
+.modal-section:last-child { margin-bottom: 0; }
+.modal-section-title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-accent-light);
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4) var(--space-8);
+}
+@media (max-width: 640px) { .detail-grid { grid-template-columns: 1fr; gap: var(--space-3); } }
+
+.detail-item {}
+.detail-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.detail-value {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.detail-value-lg {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+@media (max-width: 640px) { .pros-cons-grid { grid-template-columns: 1fr; gap: var(--space-4); } }
+
+.pros-list, .cons-list { list-style: none; }
+.pros-list li, .cons-list li {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  padding: var(--space-2) 0;
+  padding-left: var(--space-6);
+  position: relative;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-divider);
+}
+.pros-list li:last-child, .cons-list li:last-child { border-bottom: none; }
+.pros-list li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--color-accent-2);
+  font-size: var(--text-base);
+}
+.cons-list li::before {
+  content: '\2212';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: var(--text-base);
+}
+
+/* Modal responsive */
+@media (max-width: 768px) {
+  .modal-header { padding: var(--space-6) var(--space-4) var(--space-4); }
+  .modal-body { padding: var(--space-4); }
+  .modal-content { margin: var(--space-2) auto; border-radius: var(--radius-lg); }
+  .modal-close { top: var(--space-3); right: var(--space-3); }
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  padding: var(--space-12) 0 var(--space-8);
+  border-top: 1px solid var(--color-divider);
+  text-align: center;
+}
+.footer-title {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.footer-disclaimer {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-inline: auto;
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+.footer-domain {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  font-style: italic;
+}
+
+/* ========== NO RESULTS ========== */
+.no-results {
+  text-align: center;
+  padding: var(--space-16) var(--space-4);
+  display: none;
+}
+.no-results.visible { display: block; }
+.no-results h3 {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.no-results p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-inline: auto;
+}
+
+/* ========== LEARN MORE LINKS ========== */
+.learn-more-section {
+  border-top: 2px solid var(--color-accent);
+  padding-top: var(--space-6);
+}
+.learn-more-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.learn-more-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-divider);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all var(--transition-interactive);
+}
+.learn-more-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+  transform: translateX(4px);
+}
+.learn-more-link svg:first-child {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+.learn-more-link > div {
+  flex: 1;
+  min-width: 0;
+}
+.link-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-bottom: 2px;
+}
+.link-name {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.link-arrow {
+  flex-shrink: 0;
+  color: var(--color-text-faint);
+  transition: color var(--transition-interactive);
+}
+.learn-more-link:hover .link-arrow {
+  color: var(--color-accent);
+}
+</style>
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#main" class="sr-only" style="position:absolute;left:-9999px;">Skip to content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <div class="site-logo">Americans Move Abroad</div>
+    <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="main">
+  <div class="container">
+    <h1>Americans Move Abroad</h1>
+    <p class="tagline">Your directory for starting a new life overseas.</p>
+    <p class="subtitle">Researched relocation profiles for 20 countries &mdash; visa pathways, cost of living, healthcare, and more.</p>
+    <div class="stats-bar">
+      <span>20 Countries</span>
+      <span class="stat-sep" aria-hidden="true">&middot;</span>
+      <span>Updated Feb 2026</span>
+      <span class="stat-sep" aria-hidden="true">&middot;</span>
+      <span>Built for professionals 40+</span>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<section class="filter-section" aria-label="Filters">
+  <div class="container">
+    <div class="filter-row">
+      <!-- Continent -->
+      <div class="filter-group">
+        <span class="filter-label">Region</span>
+        <div class="pill-group" data-filter="continent">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="Europe">Europe</button>
+          <button class="pill" data-value="Americas">Americas</button>
+          <button class="pill" data-value="Asia">Asia</button>
+          <button class="pill" data-value="Africa">Africa</button>
+        </div>
+      </div>
+      <!-- Budget -->
+      <div class="filter-group">
+        <span class="filter-label">Budget</span>
+        <div class="pill-group" data-filter="budget">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="low">Under $1,200</button>
+          <button class="pill" data-value="mid">$1,200&ndash;$2,000</button>
+          <button class="pill" data-value="high">Over $2,000</button>
+        </div>
+      </div>
+      <!-- Visa Ease -->
+      <div class="filter-group">
+        <span class="filter-label">Visa Ease</span>
+        <div class="pill-group" data-filter="ease">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="5">Easiest</button>
+          <button class="pill" data-value="4">Easy</button>
+          <button class="pill" data-value="3">Moderate</button>
+        </div>
+      </div>
+      <!-- Search -->
+      <div class="filter-group">
+        <span class="filter-label">Search</span>
+        <input type="text" class="search-input" id="searchInput" placeholder="Country name..." aria-label="Search countries">
+      </div>
+      <!-- Count -->
+      <div class="result-count" id="resultCount">Showing 20 of 20 countries</div>
+    </div>
+  </div>
+</section>
+
+<!-- CARDS -->
+<main class="cards-section">
+  <div class="container">
+    <div class="cards-grid" id="cardsGrid"></div>
+    <div class="no-results" id="noResults">
+      <h3>No countries match your filters</h3>
+      <p>Try adjusting your filters or search term.</p>
+    </div>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-label="Country details">
+  <div class="modal-content" id="modalContent">
+    <button class="modal-close" id="modalClose" aria-label="Close details">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="modalInner"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-title">Americans Move Abroad &copy; 2026</p>
+    <p class="footer-disclaimer">Data researched February 2026. Verify current requirements with official embassy sources before making decisions.</p>
+    <p class="footer-domain">americansmoveabroad.com is available</p>
+  </div>
+</footer>
+
+<script>
+// ========== COUNTRY DATA ==========
+const COUNTRIES = [{"name":"Albania","flag":"🇦🇱","country_code":"al","visa_portal_url": "https://punetejashtme.gov.al/en/aplikim-per-vize/", "visa_portal_name": "Albania Ministry for Europe and Foreign Affairs Visa Page", "expat_guide_url": "https://www.expatexchange.com/countries/363/albania/", "expat_guide_name": "Expat Exchange Albania", "us_embassy_url": "https://al.usembassy.gov/entering-and-residing/", "us_embassy_name": "U.S. Embassy in Albania - Entering and Residing","continent":"Europe","visa_free_days":365,"visa_free_display":"365 days (US citizens)","main_visa_types":"Digital nomad (Unique Permit, $9800/yr, 12wks); Retirement (€13k/yr pension, 2-4wks); Investor (€200k+ RE)","visa_income_requirements":"Dig nomad $9800/yr; Retirement €13k/yr","cost_single":1297,"cost_couple":1896,"rent_1br":590,"healthcare_quality":"Moderate; public basic/variable, private modern in cities w/ English doctors","health_insurance_monthly":80,"safety_rating":"GPI 2025: 1.812 (52/163); low violent crime, petty theft concern","language":"Albanian (official)","english_level":"Moderate-high among youth/urban (~40%), limited older/rural","expat_cities":"Tirana (main), Saranda, Vlora, Durres, Shkoder","expat_community_size":"~150-1000 Americans; total expats ~22k-27k","climate":"Mediterranean coastal (mild wet winters 8°C, hot dry summers 33°C); continental mountains (cold snowy winters)","tax_benefits":"No US treaty; foreign pensions often exempt; dig nomad 1st yr foreign income tax-free; US FEIE/FTC mitigate double tax","path_to_pr":"5 years continuous legal temporary residency","path_to_citizenship":"7 years total legal residency (5 temp + 2 PR) + basic Albanian + clean record","internet_speed":"Median fixed 76 Mbps (up to 2.5 Gbps avail.); reliable cities","ease_rating":4,"pros":["Very low COL","365-day visa-free US","beaches/mountains","growing expats","EU candidate"],"cons":["Limited high-quality public healthcare","petty theft/scams","poor roads/traffic","low English outside tourist areas","no US tax treaty"]},{"name":"Belize","flag":"🇧🇿","country_code":"bz","visa_portal_url": "https://immigration.gov.bz", "visa_portal_name": "Belize Immigration Department", "expat_guide_url": "https://www.expatexchange.com/ctryguide/5206/20/Belize/Expats-in-Belize-Pros-and-Cons-of-Living-in-Belize", "expat_guide_name": "Expat Exchange Belize Guide", "us_embassy_url": "https://bz.usembassy.gov/", "us_embassy_name": "U.S. Embassy in Belize","continent":"Americas","visa_free_days":30,"visa_free_display":"30 days","main_visa_types":"QRP (40+ $2k/mo income); Digital Nomad ($75k/yr 6mo); PR after 1yr residence; Investor $500k","visa_income_requirements":"QRP: $2,000/mo; Digital Nomad: $75,000/yr single, $100,000 couple","cost_single":1500,"cost_couple":2500,"rent_1br":800,"healthcare_quality":"Basic public limited specialists; good private English-speaking in expat areas; evac needed for serious.","health_insurance_monthly":100,"safety_rating":"GPI ~120/163 (2025); US Level 2; safe expat areas, avoid Belize City southside.","language":"English","english_level":"Native/widely spoken (official language)","expat_cities":"San Pedro (Ambergris Caye), Placencia, Caye Caulker","expat_community_size":"~5,000-9,000 Americans","climate":"Tropical; dry cool season Nov-May (best Feb-Mar), rainy hot Jun-Oct.","tax_benefits":"Territorial tax (no tax foreign income); no US treaty but FEIE/FTC; exemption up to BZD29k (~$14.5k).","path_to_pr":"1 year continuous legal residence (<14 days absence), financial proof, clean record (~1 month)","path_to_citizenship":"5 years PR + continuous residence, good character (1-2yr process)","internet_speed":"Median fixed 48 Mbps, reliable urban/expat areas","ease_rating":4,"pros":["English official","territorial tax no foreign income tax","beaches/climate","easy 30-day entry"],"cons":["Basic healthcare with limited specialists","safety concerns in Belize City","high costs for imports"]},{"name":"Colombia","flag":"🇨🇴","country_code":"co","visa_portal_url": "https://tramitesmre.cancilleria.gov.co/tramites/enlinea/solicitarVisa.xhtml", "visa_portal_name": "Cancillería de Colombia Visa Application", "expat_guide_url": "https://www.internations.org/colombia-expats/americans", "expat_guide_name": "InterNations Americans in Colombia", "us_embassy_url": "https://co.usembassy.gov/", "us_embassy_name": "U.S. Embassy Bogota, Colombia","continent":"Americas","visa_free_days":90,"visa_free_display":"90","main_visa_types":"Digital nomad ($900/mo, 1-3 wks); Retirement ($1,382/mo pension); Investor ($35k business/$125k RE, ~30 days)","visa_income_requirements":"Retirement $1,382/mo; Dig nomad $900/mo","cost_single":1200,"cost_couple":1700,"rent_1br":600,"healthcare_quality":"Colombia ranked 22nd globally (2023); excellent modern hospitals in Medellín/Bogotá. Private care ~$25-50/visit.","health_insurance_monthly":60,"safety_rating":"GPI 2025: 2.332 (104/163); major cities safer, select areas/nightlife risks; US Level 2.","language":"Spanish","english_level":"Low overall; higher in tourist/expat areas, Medellín, Bogotá.","expat_cities":"Medellín (top), Bogotá, Cartagena, Cali, Santa Marta","expat_community_size":"~25,000-50,000 Americans","climate":"Varies by altitude: coastal hot, highlands spring-like year-round (Medellín 17-28°C), Amazon hot/humid.","tax_benefits":"No US treaty; 183+ days triggers Colombian taxation (worldwide income); FEIE/FTC available.","path_to_pr":"5 years valid visa (Retirement, Investor, or Spouse visa); continuous presence required","path_to_citizenship":"5 years continuous PR residency + Spanish + Colombian history test + clean record","internet_speed":"Median fixed 85 Mbps; fiber widely available Bogotá/Medellín","ease_rating":4,"pros":["Top-ranked healthcare","spring-like climate Medellín","large US expat community","Spanish immersion"],"cons":["Security concerns some areas","Spanish essential outside tourist areas","no US tax treaty"]},{"name":"Costa Rica","flag":"🇨🇷","country_code":"cr","visa_portal_url": "https://www.migracion.go.cr/", "visa_portal_name": "Dirección General de Migración y Extranjería", "expat_guide_url": "https://www.internations.org/costa-rica-expats", "expat_guide_name": "InterNations Costa Rica Expat Community", "us_embassy_url": "https://cr.usembassy.gov/", "us_embassy_name": "U.S. Embassy San José, Costa Rica","continent":"Americas","visa_free_days":90,"visa_free_display":"90 days","main_visa_types":"Pensionado ($1,000/mo pension, ~2mo); Rentista ($2,500/mo income, ~2mo); Investor ($200k, ~2mo)","visa_income_requirements":"Pensionado: $1,000/mo; Rentista: $2,500/mo","cost_single":2200,"cost_couple":3200,"rent_1br":900,"healthcare_quality":"CAJA public (one of best in LAm, free PR residents); private excellent, ~$40-100/visit.","health_insurance_monthly":150,"safety_rating":"GPI 2025: 1.822 (54/163); US Level 1; one of safest in Central America.","language":"Spanish","english_level":"High in tourist areas and among young/educated.","expat_cities":"San José, Escazú, Santa Ana, Tamarindo, Jacó, La Fortuna","expat_community_size":"~50,000-100,000 Americans","climate":"Tropical; distinct dry season (Dec-Apr) and rainy season (May-Nov). Pacific beaches dry Jan-Mar.","tax_benefits":"Territorial tax; no tax foreign-source income for residents; no US treaty; FEIE/FTC apply.","path_to_pr":"3 years on Pensionado/Rentista/Investor visa; Residency application maintained","path_to_citizenship":"7 years legal residency OR 5 years with Central American/Iberoamerican citizenship + Spanish proficiency + CR knowledge","internet_speed":"Median fixed 118 Mbps; urban areas strong, rural variable","ease_rating":4,"pros":["Political stability/no military","excellent CAJA healthcare","biodiversity/outdoors","large US community","territorial tax"],"cons":["High cost (expensive imports)","traffic/infrastructure San José","rainy season long","bureaucracy slow"]},{"name":"Ecuador","flag":"🇪🇨","country_code":"ec","visa_portal_url": "https://www.cancilleria.gob.ec/requisitos-para-visas/", "visa_portal_name": "Ministerio de Relaciones Exteriores Ecuador - Visas", "expat_guide_url": "https://www.expatexchange.com/countries/52/ecuador/", "expat_guide_name": "Expat Exchange Ecuador", "us_embassy_url": "https://ec.usembassy.gov/", "us_embassy_name": "U.S. Embassy Quito, Ecuador","continent":"Americas","visa_free_days":90,"visa_free_display":"90 days","main_visa_types":"Pensioner ($800/mo pension, 30 days); Rentier ($800+/mo passive income); Investor ($45k min, 30 days)","visa_income_requirements":"Pensioner/Rentier: $800/mo","cost_single":1100,"cost_couple":1600,"rent_1br":500,"healthcare_quality":"Good private hospitals in Quito/Guayaquil, English-speaking doctors available; international-quality available.","health_insurance_monthly":80,"safety_rating":"GPI 2025: 2.251 (92/163); crime uptick 2022-2024; US Level 2-3 regions; choose safer areas.","language":"Spanish","english_level":"Limited; higher in tourist/expat enclaves.","expat_cities":"Cuenca (top), Quito, Cotacachi, Vilcabamba, Guayaquil","expat_community_size":"~20,000-40,000 Americans (large Cuenca community)","climate":"Varies: highlands 'eternal spring' (Cuenca 12-22°C yr-round), coastal tropical, Amazon tropical.","tax_benefits":"No US treaty; foreign income tax-exempt on certain residency visas; FEIE/FTC apply.","path_to_pr":"3 years on qualifying visa; residency renewal each year leading to permanent","path_to_citizenship":"3 years PR + Spanish + Ecuador civic test + clean record","internet_speed":"Median fixed 60 Mbps; urban reliable, rural variable","ease_rating":5,"pros":["Lowest COL on list","eternal spring climate in highlands","uses USD","very easy visa","affordable healthcare"],"cons":["Security concerns in some regions","limited high-end cultural amenities","Spanish essential","variable infrastructure"]},{"name":"France","flag":"🇫🇷","country_code":"fr","visa_portal_url": "https://france-visas.gouv.fr", "visa_portal_name": "France-Visas Official Portal", "expat_guide_url": "https://www.expatica.com/fr/moving/visas-and-permits/", "expat_guide_name": "Expatica France Visa & Permits Guide", "us_embassy_url": "https://fr.usembassy.gov/", "us_embassy_name": "U.S. Embassy Paris, France","continent":"Europe","visa_free_days":90,"visa_free_display":"90 days (Schengen)","main_visa_types":"Passive income/Rentier (€1,500/mo, 2-3 mo); Student; Talent (digital nomad-style); Long-stay tourist","visa_income_requirements":"Rentier: ~€1,500/mo; bank statements required","cost_single":3000,"cost_couple":4500,"rent_1br":1400,"healthcare_quality":"Rated #1 globally by WHO; public healthcare excellent; must contribute/private supplement.","health_insurance_monthly":200,"safety_rating":"GPI 2025: 1.777 (48/163); US Level 2; general safe, terrorism/protest awareness needed.","language":"French","english_level":"Moderate in cities/tourism, low in rural areas.","expat_cities":"Paris, Nice, Lyon, Bordeaux, Montpellier, Provence region","expat_community_size":"~100,000+ Americans","climate":"Varied: Paris oceanic (cold winters 4°C, warm summers 25°C); south Mediterranean (mild winters, hot dry summers).","tax_benefits":"US-France tax treaty: offsets most double taxation; French wealth tax may apply; fiscal paradise regions (e.g., Monaco nearby).","path_to_pr":"5 years legal residency; continuous physical presence required","path_to_citizenship":"5 years legal residency (can include PR years) + French language B1 + integration + clean record","internet_speed":"Median fixed 165 Mbps; fiber widely available","ease_rating":3,"pros":["World-class healthcare","culture/food","US tax treaty","central EU location","excellent transit"],"cons":["Very high COL especially Paris","French essential","complex bureaucracy","high taxes","US Level 2"]},{"name":"Georgia (Country)","flag":"🇬🇪","country_code":"ge","visa_portal_url": "https://www.geoconsul.gov.ge/en/", "visa_portal_name": "Georgian Consular Portal", "expat_guide_url": "https://www.expatexchange.com/countries/232/georgia/", "expat_guide_name": "Expat Exchange Georgia", "us_embassy_url": "https://ge.usembassy.gov/", "us_embassy_name": "U.S. Embassy Tbilisi, Georgia","continent":"Europe","visa_free_days":365,"visa_free_display":"365 days (US citizens)","main_visa_types":"Visa-free 365 days; Work Permit (employer-sponsored); Residency (investment/employment/family)","visa_income_requirements":"No minimum for 365-day visa-free stay","cost_single":1200,"cost_couple":1800,"rent_1br":550,"healthcare_quality":"Improving private sector (Tbilisi/Batumi); basic public; expats use private (English-speaking doctors available).","health_insurance_monthly":70,"safety_rating":"GPI 2025: 1.522 (22/163); very safe; low violent crime; US Level 1.","language":"Georgian (official), Russian widely spoken","english_level":"Growing among youth/urban; moderate in Tbilisi; limited elsewhere.","expat_cities":"Tbilisi (main), Batumi, Kutaisi","expat_community_size":"~5,000-15,000 Americans; large total expat community","climate":"Varied: Tbilisi warm continental (hot summers 35°C, cold winters -2°C); Batumi subtropical.","tax_benefits":"Flat 20% income tax; no tax on foreign-source income for non-residents/short stays; no US treaty; Virtual Zone status for IT workers (1% tax).","path_to_pr":"Permanent residency requires 6 years of legal residency OR investment ($100k+)","path_to_citizenship":"10 years legal residency OR investment/special merit","internet_speed":"Median fixed 52 Mbps; expanding fiber in cities","ease_rating":5,"pros":["365-day visa-free US","very low COL","very safe","low flat tax","stunning landscapes"],"cons":["Limited English","Russian geopolitical proximity","basic public healthcare","complex long-term visa"]},{"name":"Germany","flag":"🇩🇪","country_code":"de","visa_portal_url": "https://www.auswaertiges-amt.de/en/visa-service", "visa_portal_name": "German Federal Foreign Office Visa Service", "expat_guide_url": "https://www.expatica.com/de/moving/visas-and-permits/", "expat_guide_name": "Expatica Germany Visa & Permits Guide", "us_embassy_url": "https://de.usembassy.gov/", "us_embassy_name": "U.S. Embassy Berlin, Germany","continent":"Europe","visa_free_days":90,"visa_free_display":"90 days (Schengen)","main_visa_types":"Freelancer (Freiberufler); Passive income/Rentier (~€1,000+/mo); Job Seeker (6 months); Skilled Worker","visa_income_requirements":"Rentier: sufficient funds (~€1,000/mo); health insurance required","cost_single":2500,"cost_couple":3800,"rent_1br":1200,"healthcare_quality":"Excellent; universal statutory insurance (GKV) or private (PKV); top hospitals; English-speaking doctors in cities.","health_insurance_monthly":180,"safety_rating":"GPI 2025: 1.459 (15/163); very safe; US Level 1; low violent crime.","language":"German","english_level":"High in cities, good among professionals and youth.","expat_cities":"Berlin, Munich, Hamburg, Frankfurt, Düsseldorf, Cologne","expat_community_size":"~100,000+ Americans","climate":"Temperate oceanic: cold winters (-2 to 4°C), mild-warm summers (20-25°C); reliable 4 seasons.","tax_benefits":"US-Germany tax treaty; progressive tax (14-45%); but treaty offsets most double taxation.","path_to_pr":"5 years legal residency (or 3 years married to German) + German language B1","path_to_citizenship":"5 years legal residency (reduced from 8 for special integration) + B1 German + dual citizenship now allowed (2024)","internet_speed":"Median fixed 100 Mbps; fiber expanding, variable in rural East","ease_rating":3,"pros":["US tax treaty","excellent healthcare","central EU","strong economy/jobs","dual citizenship allowed"],"cons":["High COL especially Munich","German essential","cold winters","bureaucracy","high taxes"]},{"name":"Greece","flag":"🇬🇷","country_code":"gr","visa_portal_url": "https://www.mfa.gr/en/visas/", "visa_portal_name": "Greek Ministry of Foreign Affairs Visas", "expat_guide_url": "https://www.expatica.com/gr/moving/visas-and-permits/", "expat_guide_name": "Expatica Greece Visa & Permits Guide", "us_embassy_url": "https://gr.usembassy.gov/", "us_embassy_name": "U.S. Embassy Athens, Greece","continent":"Europe","visa_free_days":90,"visa_free_display":"90 days (Schengen)","main_visa_types":"Digital nomad (€3,500/mo, 1-2 mo); Passive income/Rentier (€2,000/mo); Golden Visa (€250k RE, suspended in hotspots); Retirement","visa_income_requirements":"Digital nomad €3,500/mo; Passive income €2,000/mo","cost_single":2000,"cost_couple":3000,"rent_1br":900,"healthcare_quality":"Public (EOPYY free for residents) decent; private better; expats often use private with English-speaking doctors.","health_insurance_monthly":120,"safety_rating":"GPI 2025: 1.596 (28/163); very safe for expats; US Level 1; low violent crime.","language":"Greek","english_level":"High in tourist areas, growing among young/urban.","expat_cities":"Athens, Thessaloniki, Crete, Rhodes, Corfu, Santorini area","expat_community_size":"~15,000-30,000 Americans","climate":"Mediterranean: hot dry summers (30-35°C), mild wet winters (10-15°C); 300+ days sunshine islands.","tax_benefits":"No US tax treaty; 7% flat tax option for retirees (10 years); digital nomad 50% income tax exemption for 7 years; FEIE/FTC available.","path_to_pr":"5 years legal residency + Greek language A2 (basic)","path_to_citizenship":"7 years legal residency + Greek language B1 + integration + clean record","internet_speed":"Median fixed 100 Mbps; fiber in cities, variable islands","ease_rating":4,"pros":["Mediterranean climate","affordable (vs. W. Europe)","islands/lifestyle","growing digital nomad infrastructure","7% flat tax option"],"cons":["No US tax treaty","Greek bureaucracy notorious","economic instability history","limited non-tourist English"]},{"name":"Italy","flag":"🇮🇹","country_code":"it","visa_portal_url": "https://vistoperitalia.esteri.it/", "visa_portal_name": "Italian Visa Portal (Visto per Italia)", "expat_guide_url": "https://www.expatica.com/it/moving/visas-and-permits/", "expat_guide_name": "Expatica Italy Visa & Permits Guide", "us_embassy_url": "https://it.usembassy.gov/", "us_embassy_name": "U.S. Embassy Rome, Italy","continent":"Europe","visa_free_days":90,"visa_free_display":"90 days (Schengen)","main_visa_types":"Elective Residency (€31k/yr passive income); Digital nomad (€28k/yr, 2-3 mo); Investor (€250k startup/€500k company)","visa_income_requirements":"Elective Residency: €31,000/yr; Digital nomad: €28,000/yr","cost_single":2200,"cost_couple":3200,"rent_1br":1000,"healthcare_quality":"Public SSN universal (residents entitled); ranked #2 globally WHO; private for speed/English. €20-50/visit copays.","health_insurance_monthly":150,"safety_rating":"GPI 2025: 1.741 (39/163); generally safe; US Level 2; watch pickpockets tourist areas.","language":"Italian","english_level":"Moderate in cities/tourism; limited rural.","expat_cities":"Rome, Florence, Milan, Bologna, Naples, Sicily, Tuscany","expat_community_size":"~20,000-35,000 Americans","climate":"North: cold winters, hot summers; Central/South: Mediterranean (mild winters 8°C, hot summers 32°C); Sicily hot dry summers.","tax_benefits":"US-Italy tax treaty; €100k flat tax for new residents (lump sum, high earners); 7% flat tax retirees in south; FEIE/FTC available.","path_to_pr":"5 years legal residency (EU PR permit)","path_to_citizenship":"10 years legal residency + Italian language B1; ancestry routes for Jure Sanguinis","internet_speed":"Median fixed 95 Mbps; fiber expanding, south rural variable","ease_rating":3,"pros":["Culture/food/history","US tax treaty","€100k flat tax option","WHO top healthcare","Jure Sanguinis citizenship"],"cons":["High COL cities","Italian bureaucracy","language barrier","south infrastructure gaps"]},{"name":"Japan","flag":"🇯🇵","country_code":"jp","visa_portal_url": "https://www.mofa.go.jp/j_info/visit/visa/", "visa_portal_name": "Japan Ministry of Foreign Affairs Visa Information", "expat_guide_url": "https://www.internations.org/japan-expats/americans", "expat_guide_name": "InterNations Americans in Japan", "us_embassy_url": "https://jp.usembassy.gov/", "us_embassy_name": "U.S. Embassy Tokyo, Japan","continent":"Asia","visa_free_days":90,"visa_free_display":"90 days","main_visa_types":"Highly Skilled Professional (points-based); Specified Skilled Worker; Business Manager; Digital Nomad (6 months, ¥10M/yr)","visa_income_requirements":"Digital nomad ¥10M (~$67k)/yr; Skilled Worker: employer sponsored","cost_single":2500,"cost_couple":3600,"rent_1br":1100,"healthcare_quality":"Excellent; universal health insurance; among best in world. Expats join NHI after 3 months; ~$30-80/visit.","health_insurance_monthly":130,"safety_rating":"GPI 2025: 1.336 (9/163); one of world's safest countries; US Level 1; negligible violent crime.","language":"Japanese","english_level":"Low overall; tourist infrastructure improving; English menus/signs major cities.","expat_cities":"Tokyo, Osaka, Kyoto, Fukuoka, Nagoya","expat_community_size":"~55,000-65,000 Americans","climate":"4 seasons: cold winters (Tokyo -1-10°C), hot humid summers (28-35°C); cherry blossoms spring; typhoons late summer.","tax_benefits":"US-Japan tax treaty; Japan taxes worldwide income of residents; treaty prevents full double-tax; FEIE still applies.","path_to_pr":"10 years legal residency (5 years for Highly Skilled Professional); continuous presence; tax compliance","path_to_citizenship":"5 years PR + renunciation of US citizenship (Japan doesn't allow dual with US)","internet_speed":"Median fixed 270 Mbps; world-class infrastructure","ease_rating":3,"pros":["Safest country on list","world-class infrastructure","culture/food","universal healthcare","US tax treaty"],"cons":["Language barrier steep","no dual citizenship","high COL Tokyo","cultural integration difficulty","long PR path"]},{"name":"Malaysia","flag":"🇲🇾","country_code":"my","visa_portal_url": "https://www.imi.gov.my/index.php/en/", "visa_portal_name": "Immigration Department of Malaysia", "expat_guide_url": "https://www.internations.org/malaysia-expats/americans", "expat_guide_name": "InterNations Americans in Malaysia", "us_embassy_url": "https://my.usembassy.gov/", "us_embassy_name": "U.S. Embassy Kuala Lumpur, Malaysia","continent":"Asia","visa_free_days":90,"visa_free_display":"90 days","main_visa_types":"MM2H (Malaysia My Second Home - $2k/mo income, $130k fixed deposit); DE Rantau (digital nomad, $24k/yr, MYR 32,000/yr threshold)","visa_income_requirements":"MM2H: $2,000/mo + $130k fixed deposit; DE Rantau: $24,000/yr","cost_single":1600,"cost_couple":2400,"rent_1br":700,"healthcare_quality":"High-quality private hospitals (Penang, KL world medical tourism hubs); English-speaking; affordable.","health_insurance_monthly":90,"safety_rating":"GPI 2025: 1.597 (29/163); safe in expat areas; US Level 1; standard urban precautions.","language":"Malay (Bahasa Malaysia)","english_level":"High; English widely used in business, education, daily life in cities.","expat_cities":"Kuala Lumpur, Penang (Georgetown), Johor Bahru, Kota Kinabalu","expat_community_size":"~10,000-20,000 Americans","climate":"Tropical: warm year-round (26-33°C); two monsoon seasons; humidity high year-round.","tax_benefits":"No US tax treaty; territorial tax (no tax on foreign income); flat 15% for MM2H on Malaysian income; FEIE/FTC apply.","path_to_pr":"MM2H is long-stay visa (5 years renewable), not PR path; PR via employment or family (5+ years, difficult for Americans)","path_to_citizenship":"Rare for Americans; requires 12 years legal residency, language, culture test; dual citizenship not allowed","internet_speed":"Median fixed 120 Mbps; fast reliable urban","ease_rating":4,"pros":["English widely spoken","world-class medical tourism","affordable COL","tropical climate","food culture"],"cons":["Very difficult PR/citizenship","no US tax treaty","humidity year-round","conservative culture restrictions","MM2H requirements strict"]},{"name":"Mexico","flag":"🇲🇽","country_code":"mx","visa_portal_url": "https://consulmex.sre.gob.mx/losangeles/index.php/visas", "visa_portal_name": "Mexican Consulate Visa Information", "expat_guide_url": "https://www.internations.org/mexico-expats/americans", "expat_guide_name": "InterNations Americans in Mexico", "us_embassy_url": "https://mx.usembassy.gov/", "us_embassy_name": "U.S. Embassy Mexico City","continent":"Americas","visa_free_days":180,"visa_free_display":"180 days","main_visa_types":"Temporary Resident (financiero: $2,600/mo income or $43k savings, 15 days); Permanent Resident (after 4 yrs); Retiree/Rentista financiero","visa_income_requirements":"Financiero: ~$2,600/mo income or ~$43,000 savings (2025 amounts, vary by consulate)","cost_single":1800,"cost_couple":2600,"rent_1br":800,"healthcare_quality":"Private hospitals excellent (IMSS basic, Seguro Popular limited public); Guadalajara/CDMX top private hospitals; English widely available.","health_insurance_monthly":120,"safety_rating":"GPI 2025: 2.660 (140/163); US Level 2-4 by state; expat cities (CDMX, Oaxaca, Mérida) generally safe; avoid high-risk states.","language":"Spanish","english_level":"High in tourist/expat areas; lower in rural/non-tourist regions.","expat_cities":"Mexico City (CDMX), San Miguel de Allende, Oaxaca, Mérida, Puerto Vallarta, Guadalajara","expat_community_size":"~1,000,000+ Americans (largest abroad)","climate":"Varied: CDMX mild spring-like (~18-26°C year-round); Pacific coast tropical (hot/humid); Yucatan hot (28-35°C); highlands cooler.","tax_benefits":"No US-Mexico tax treaty for individuals; FEIE/FTC available; territorial tax for non-residents; 183+ days triggers Mexican tax.","path_to_pr":"4 years Temporary Resident visa; apply for Permanent Resident after 4 consecutive years; straightforward process","path_to_citizenship":"5 years legal PR residency (or 2 years married to Mexican) + Spanish + Mexican history test + clean record","internet_speed":"Median fixed 72 Mbps; good urban, variable rural","ease_rating":4,"pros":["Largest American expat community","proximity to US","180-day visa-free entry","diverse climate options","familiar food"],"cons":["Security concerns some regions","no US tax treaty","bureaucracy","healthcare varies by location"]},{"name":"Panama","flag":"🇵🇦","country_code":"pa","visa_portal_url": "https://www.migracion.gob.pa/", "visa_portal_name": "Servicio Nacional de Migración de Panamá", "expat_guide_url": "https://www.internations.org/panama-expats", "expat_guide_name": "InterNations Panama Expat Community", "us_embassy_url": "https://pa.usembassy.gov/", "us_embassy_name": "U.S. Embassy Panama City","continent":"Americas","visa_free_days":180,"visa_free_display":"180 days","main_visa_types":"Pensionado ($1,000/mo pension, 2-3 mo); Friendly Nations (12 qualifying countries incl. US, $200k RE or employment); Qualified Investor ($300k RE)","visa_income_requirements":"Pensionado: $1,000/mo; Friendly Nations: employment proof or $200k RE","cost_single":2000,"cost_couple":3000,"rent_1br":900,"healthcare_quality":"Good private hospitals (Punta Pacifica JCI-accredited, affiliated with Johns Hopkins); English widely spoken; medical tourism hub.","health_insurance_monthly":140,"safety_rating":"GPI 2025: 2.050 (71/163); US Level 2; expat areas generally safe; standard precautions.","language":"Spanish","english_level":"High in Panama City; English is second language for many professionals.","expat_cities":"Panama City, Boquete, Bocas del Toro, El Valle de Anton","expat_community_size":"~25,000-35,000 Americans","climate":"Tropical: year-round warm 26-32°C; dry season Dec-Apr (Pacific side), wet May-Nov. Cooler highlands (Boquete 15-25°C).","tax_benefits":"Territorial tax (no tax on foreign-source income); USD currency; no US treaty but FEIE/FTC; Pensionado discounts on services.","path_to_pr":"Friendly Nations: immediate PR (2-3 months). Pensionado: permanent visa immediately with pension. One of fastest PR paths worldwide.","path_to_citizenship":"5 years legal residency + Spanish + civics knowledge + renounce other citizenships (no dual with US)","internet_speed":"Median fixed 85 Mbps; reliable Panama City, variable interior","ease_rating":5,"pros":["Immediate PR via Friendly Nations","USD currency","territorial tax","good English","JCI-accredited hospital"],"cons":["No dual citizenship with US","heat/humidity year-round","limited cultural activities outside Panama City","uneven infrastructure"]},{"name":"Portugal","flag":"🇵🇹","country_code":"pt","visa_portal_url": "https://vistos.mne.gov.pt/", "visa_portal_name": "Vistos Portugal Official Visa Portal", "expat_guide_url": "https://www.expatica.com/pt/moving/visas-and-permits/", "expat_guide_name": "Expatica Portugal Visa & Permits Guide", "us_embassy_url": "https://pt.usembassy.gov/", "us_embassy_name": "U.S. Embassy Lisbon, Portugal","continent":"Europe","visa_free_days":90,"visa_free_display":"90 days (Schengen)","main_visa_types":"D7 Passive Income (€760/mo, 2-3 mo); Digital Nomad D8 (€3,040/mo, 2-3 mo); D2 Entrepreneur; NHR tax regime (ended 2024 - IFICI replaced)","visa_income_requirements":"D7: ~€760/mo; D8 Digital Nomad: ~€3,040/mo","cost_single":2200,"cost_couple":3200,"rent_1br":1100,"healthcare_quality":"SNS public decent (free residents); private excellent; English-speaking doctors widely available.","health_insurance_monthly":130,"safety_rating":"GPI 2025: 1.354 (7/163); 4th safest in EU; US Level 1; very safe.","language":"Portuguese","english_level":"High; among highest English proficiency in Europe, especially under 50.","expat_cities":"Lisbon, Porto, Algarve, Cascais, Sintra, Madeira, Azores","expat_community_size":"~30,000-50,000 Americans","climate":"Atlantic: mild winters (9-15°C), warm sunny summers (25-30°C); Algarve 300+ days sun/yr; Madeira 'eternal spring'.","tax_benefits":"No US-Portugal tax treaty; NHR ended Dec 2024; IFICI (new incentive) for researchers/qualified professionals; FEIE/FTC available.","path_to_pr":"5 years legal residency with valid visa/residence permit","path_to_citizenship":"5 years legal residency + A2 Portuguese language + clean record (dual citizenship allowed)","internet_speed":"Median fixed 175 Mbps; fiber widely available, fast","ease_rating":4,"pros":["Very safe","high English","warm climate","EU access","affordable vs. W. Europe","5yr citizenship"],"cons":["No US tax treaty","NHR ended (less favorable tax)","housing costs risen sharply","bureaucracy slow"]},{"name":"Spain","flag":"🇪🇸","country_code":"es","visa_portal_url": "https://www.exteriores.gob.es/en/EmbajadasConsulados/WASHINGTON/Paginas/Consular-Services/Visas.aspx", "visa_portal_name": "Spanish Embassy Washington Visa Information", "expat_guide_url": "https://www.expatica.com/es/moving/visas-and-permits/", "expat_guide_name": "Expatica Spain Visa & Permits Guide", "us_embassy_url": "https://es.usembassy.gov/", "us_embassy_name": "U.S. Embassy Madrid, Spain","continent":"Europe","visa_free_days":90,"visa_free_display":"90 days (Schengen)","main_visa_types":"Non-Lucrative Residence (€2,400/mo, 2-3 mo); Digital Nomad (€2,334/mo, 2-3 mo); Golden Visa (€500k RE); Beckham Law (15% flat tax, 6 yrs)","visa_income_requirements":"Non-Lucrative: ~€2,400/mo; Digital Nomad: ~€2,334/mo","cost_single":2300,"cost_couple":3400,"rent_1br":1100,"healthcare_quality":"Universal public (residents via Social Security contributions); private excellent; English in major cities.","health_insurance_monthly":160,"safety_rating":"GPI 2025: 1.584 (26/163); safe; US Level 1; pickpockets tourist areas.","language":"Spanish (Castilian), regional languages","english_level":"Improving; higher in Madrid/Barcelona/tourist areas; lower in rural.","expat_cities":"Madrid, Barcelona, Málaga, Valencia, Seville, Canary Islands, Mallorca","expat_community_size":"~40,000-60,000 Americans","climate":"Varied: Madrid continental (cold winters -2 to 9°C, hot summers 36°C+); Barcelona Mediterranean; south/Canaries mild year-round.","tax_benefits":"US-Spain tax treaty; Beckham Law: 15% flat tax on Spanish-source income for 6 years (digital nomads); FEIE/FTC available.","path_to_pr":"5 years legal residency; continuous presence","path_to_citizenship":"10 years legal residency + Spanish + culture test + clean record; dual with US not permitted","internet_speed":"Median fixed 200 Mbps; among best in EU; fiber widely deployed","ease_rating":3,"pros":["US tax treaty","Beckham Law (15% flat tax)","culture/climate","excellent healthcare","fast internet"],"cons":["High income requirements","no dual citizenship","10yr citizenship path","complex bureaucracy","housing expensive"]},{"name":"Taiwan","flag":"🇹🇼","country_code":"tw","visa_portal_url": "https://www.boca.gov.tw/mp-2.html", "visa_portal_name": "Bureau of Consular Affairs Taiwan (BOCA)", "expat_guide_url": "https://www.internations.org/taiwan-expats", "expat_guide_name": "InterNations Taiwan Expat Community", "us_embassy_url": "https://www.ait.org.tw/", "us_embassy_name": "American Institute in Taiwan (AIT)", "continent":"Asia","visa_free_days":90,"visa_free_display":"90 days","main_visa_types":"Employment Gold Card (self-sponsored, ~$5k-$7k/mo salary or profession-based, 1-3 yr renewable); Entrepreneur; Employment (employer-sponsored)","visa_income_requirements":"Gold Card: profession-based or TWD 160,000/mo (~$5,000/mo) salary","cost_single":2000,"cost_couple":2900,"rent_1br":900,"healthcare_quality":"NHI (National Health Insurance): universal, among best globally (Bloomberg 2024); low-cost care; ~$5-15/visit.","health_insurance_monthly":40,"safety_rating":"GPI 2025: 1.481 (18/163); very safe; low violent crime; US Level 1. (Political: China tensions, assess carefully)","language":"Mandarin Chinese (Traditional)","english_level":"Moderate-high in Taipei; growing among professionals; some English menus/signs.","expat_cities":"Taipei, Kaohsiung, Taichung, Hsinchu, Tainan","expat_community_size":"~15,000-25,000 Americans","climate":"Subtropical: hot humid summers (32-36°C), mild winters (15-20°C); typhoons Jul-Sep; north rainier than south.","tax_benefits":"No US-Taiwan tax treaty; 183+ days triggers Taiwan income tax; FEIE/FTC available; Gold Card holders: 50% exemption on Taiwan income exceeding $400k TWD.","path_to_pr":"5 years continuous legal residency; Gold Card holders may qualify faster","path_to_citizenship":"Dual citizenship since 2019 for special skills/Gold Card (waiver of renunciation); otherwise 5yr PR + renounce","internet_speed":"Median fixed 220 Mbps; excellent infrastructure, affordable fiber","ease_rating":4,"pros":["Cheapest healthcare on list ($40/mo)","excellent infrastructure","Gold Card dual citizenship path","high English in Taipei","vibrant food/culture"],"cons":["China geopolitical risk","language barrier (Mandarin)","no US tax treaty","typhoon season","limited living space"]},{"name":"Thailand","flag":"🇹🇭","country_code":"th","visa_portal_url": "https://www.thaievisa.go.th", "visa_portal_name": "Thai e-Visa Official Portal", "expat_guide_url": "https://www.internations.org/thailand-expats/americans", "expat_guide_name": "InterNations Americans in Thailand", "us_embassy_url": "https://th.usembassy.gov/", "us_embassy_name": "U.S. Embassy Bangkok, Thailand","continent":"Asia","visa_free_days":60,"visa_free_display":"60 days (extended to 60 in 2024)","main_visa_types":"LTR Long-Term Resident (Wealthy Pensioner $80k/yr; Wealthy Global Citizen $500k assets + income; Digital Nomad $80k/yr income)","visa_income_requirements":"LTR Wealthy Pensioner: $80,000/yr + $250k savings; Digital Nomad: $80,000/yr","cost_single":1500,"cost_couple":2300,"rent_1br":700,"healthcare_quality":"World-class private hospitals (Bumrungrad, Bangkok Hospital); international JCI-accredited; affordable; major medical tourism hub.","health_insurance_monthly":85,"safety_rating":"GPI 2025: 2.077 (76/163); US Level 1; tourist areas safe; south border provinces avoid.","language":"Thai","english_level":"Moderate in tourist areas/Bangkok; low elsewhere.","expat_cities":"Bangkok, Chiang Mai, Phuket, Hua Hin, Pattaya, Koh Samui","expat_community_size":"~30,000-50,000 Americans","climate":"Tropical: hot season Mar-May (35-40°C), rainy season Jun-Oct, cool season Nov-Feb (Bangkok 20-30°C); Chiang Mai cooler.","tax_benefits":"US-Thailand tax treaty; 2024 rule: remitted foreign income now taxable if resident; LTR visa: exemption from Thai tax on foreign income.","path_to_pr":"PR requires 3 years on Non-Immigrant visa + continuous presence + Thai points system; LTR is 10-year renewable, not PR","path_to_citizenship":"10+ years PR + Thai language/culture + points; rarely granted to Americans; no dual citizenship","internet_speed":"Median fixed 135 Mbps; fast reliable Bangkok; expanding elsewhere","ease_rating":3,"pros":["World-class affordable hospitals","tropical lifestyle","US tax treaty","food culture","large expat community"],"cons":["Language barrier","no dual citizenship","difficult long-term status without LTR","heat/humidity","limited political rights for foreigners"]},{"name":"Uruguay","flag":"🇺🇾","country_code":"uy","visa_portal_url": "https://www.gub.uy/ministerio-relaciones-exteriores/", "visa_portal_name": "Ministerio de Relaciones Exteriores Uruguay", "expat_guide_url": "https://www.expatexchange.com/countries/231/uruguay/", "expat_guide_name": "Expat Exchange Uruguay", "us_embassy_url": "https://uy.usembassy.gov/", "us_embassy_name": "U.S. Embassy Montevideo, Uruguay","continent":"Americas","visa_free_days":90,"visa_free_display":"90 days","main_visa_types":"Temporary Residency (proof of income/savings ~$1,500/mo, 30 days); Retirement; Investor; fast-track Permanent via property","visa_income_requirements":"~$1,500/mo income or savings equivalent","cost_single":2100,"cost_couple":3100,"rent_1br":900,"healthcare_quality":"Good; public ASSE + private mutualistas; private comparable to US quality; English-speaking in Montevideo.","health_insurance_monthly":120,"safety_rating":"GPI 2025: 1.779 (50/163); safest in South America; US Level 1; low crime.","language":"Spanish","english_level":"Limited; growing in Montevideo among young/educated.","expat_cities":"Montevideo, Punta del Este, Colonia del Sacramento","expat_community_size":"~5,000-10,000 Americans","climate":"Temperate: mild summers (22-27°C Dec-Feb), cool winters (8-14°C Jun-Aug); rainfall year-round; no extremes.","tax_benefits":"No US treaty; first 11 years can opt for territorial tax (no tax on foreign income); after 11 years: worldwide income taxed; FEIE/FTC apply.","path_to_pr":"3 years of Temporary Residency; straightforward process; fast-track options via investment","path_to_citizenship":"3 years legal residency (PR) + Spanish proficiency + clean record; dual citizenship allowed","internet_speed":"Median fixed 68 Mbps; Uruguay has best fixed broadband LAm per capita","ease_rating":4,"pros":["Safest in South America","11-yr territorial tax","dual citizenship allowed","stable democracy","fast 3yr citizenship"],"cons":["Limited English","higher COL vs. region","small expat community","after 11yr worldwide taxation"]},{"name":"Vietnam","flag":"🇻🇳","country_code":"vn","visa_portal_url": "https://evisa.xuatnhapcanh.gov.vn/", "visa_portal_name": "Vietnam E-Visa Official Portal", "expat_guide_url": "https://www.internations.org/vietnam-expats/americans", "expat_guide_name": "InterNations Americans in Vietnam", "us_embassy_url": "https://vn.usembassy.gov/", "us_embassy_name": "U.S. Embassy Hanoi, Vietnam","continent":"Asia","visa_free_days":45,"visa_free_display":"45 days","main_visa_types":"E-visa (90 days, extendable, $25); Business/Work visa (employer-sponsored); DT investor visa ($130k)","visa_income_requirements":"E-visa: no income requirement; Business/Work: employer-sponsored","cost_single":1200,"cost_couple":1800,"rent_1br":550,"healthcare_quality":"Basic public, good private international hospitals (Hanoi, HCMC); affordable; medical travel to Bangkok for complex care.","health_insurance_monthly":60,"safety_rating":"GPI 2025: 1.789 (44/163); very safe; US Level 1; petty theft in tourist areas.","language":"Vietnamese","english_level":"Growing especially in cities/tourist areas and young generation; moderate in Hanoi/HCMC.","expat_cities":"Ho Chi Minh City (HCMC), Hanoi, Da Nang, Hoi An","expat_community_size":"~10,000-15,000 Americans","climate":"North (Hanoi): 4 seasons (cool 15°C winter, hot humid 38°C summer); South (HCMC): tropical, hot year-round 28-35°C; dry/wet seasons.","tax_benefits":"No US treaty; 183+ days triggers Vietnamese tax (20% flat rate); FEIE/FTC available; low tax on foreign-source income for short-term expats.","path_to_pr":"Permanent residency rare without Vietnamese spouse/family; 5yr investor route; most expats on rolling visas","path_to_citizenship":"Very rare; 5yr PR + Vietnamese + renounce other citizenships; not a realistic path for most Americans","internet_speed":"Median fixed 90 Mbps; fast improving; reliable major cities","ease_rating":4,"pros":["Very low COL","affordable international hospitals","vibrant culture/food","growing expat infrastructure","45-day e-visa easy entry"],"cons":["Limited long-term visa options","language barrier","no realistic citizenship path","air quality HCMC","complex business restrictions"]}];
+
+// ========== THEME TOGGLE ==========
+(function() {
+  const toggle = document.querySelector('[data-theme-toggle]');
+  const root = document.documentElement;
+  // Default to light mode for consistency
+  let theme = 'light';
+  root.setAttribute('data-theme', theme);
+
+  const sunSVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  const moonSVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+  function updateToggle() {
+    if (!toggle) return;
+    toggle.innerHTML = theme === 'dark' ? sunSVG : moonSVG;
+    toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+  }
+  updateToggle();
+
+  if (toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      theme = theme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      updateToggle();
+    });
+  }
+})();
+
+// ========== FILTERS STATE ==========
+let activeFilters = { continent: 'all', budget: 'all', ease: 'all', search: '' };
+
+// ========== RENDER CARDS ==========
+function formatCost(n) { return '$' + n.toLocaleString('en-US'); }
+
+function renderDots(rating, size) {
+  let html = '';
+  for (let i = 1; i <= 5; i++) {
+    html += '<span class="ease-dot' + (i <= rating ? ' filled' : '') + '" style="width:' + size + 'px;height:' + size + 'px;"></span>';
+  }
+  return html;
+}
+
+function renderCards() {
+  const grid = document.getElementById('cardsGrid');
+  grid.innerHTML = '';
+  COUNTRIES.forEach((c, i) => {
+    const card = document.createElement('div');
+    card.className = 'country-card fade-in';
+    card.setAttribute('data-index', i);
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', 'View details for ' + c.name);
+    const topProRaw = c.pros.length > 0 ? c.pros[0] : 'Great destination';
+    const topPro = topProRaw.length > 60 ? topProRaw.substring(0, 57) + '…' : topProRaw;
+    card.innerHTML = `
+      <div class="card-header">
+        <img class="card-flag" src="https://flagcdn.com/w80/${c.country_code}.png" alt="${c.name} flag" width="40" height="30" loading="lazy">
+        <div class="card-title-area">
+          <h2 class="card-country-name">${c.name}</h2>
+          <span class="card-continent">${c.continent}</span>
+        </div>
+      </div>
+      <div class="card-stats">
+        <div>
+          <div class="card-stat-label">Monthly Cost</div>
+          <div class="card-stat-value">${formatCost(c.cost_single)}/mo</div>
+        </div>
+        <div>
+          <div class="card-stat-label">Visa-Free</div>
+          <div class="card-stat-value">${c.visa_free_days} days</div>
+        </div>
+        <div>
+          <div class="card-stat-label">Visa Ease</div>
+          <div class="card-ease">${renderDots(c.ease_rating, 10)}</div>
+        </div>
+      </div>
+      <div class="card-pro"><strong>Top pro:</strong> ${topPro}</div>
+      <button class="card-cta" tabindex="-1" aria-hidden="true">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    `;
+    card.addEventListener('click', () => openModal(i));
+    card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(i); } });
+    grid.appendChild(card);
+  });
+}
+
+// ========== FILTER LOGIC ==========
+function applyFilters() {
+  const cards = document.querySelectorAll('.country-card');
+  let visible = 0;
+  cards.forEach((card) => {
+    const i = parseInt(card.getAttribute('data-index'));
+    const c = COUNTRIES[i];
+    let show = true;
+
+    // Continent
+    if (activeFilters.continent !== 'all' && c.continent !== activeFilters.continent) show = false;
+    // Budget
+    if (activeFilters.budget !== 'all') {
+      if (activeFilters.budget === 'low' && c.cost_single >= 1200) show = false;
+      if (activeFilters.budget === 'mid' && (c.cost_single < 1200 || c.cost_single > 2000)) show = false;
+      if (activeFilters.budget === 'high' && c.cost_single <= 2000) show = false;
+    }
+    // Ease
+    if (activeFilters.ease !== 'all' && c.ease_rating !== parseInt(activeFilters.ease)) show = false;
+    // Search
+    if (activeFilters.search && !c.name.toLowerCase().includes(activeFilters.search.toLowerCase())) show = false;
+
+    if (show) {
+      card.classList.remove('hidden');
+      card.classList.add('fade-in');
+      visible++;
+    } else {
+      card.classList.add('hidden');
+      card.classList.remove('fade-in');
+    }
+  });
+
+  document.getElementById('resultCount').textContent = 'Showing ' + visible + ' of 20 countries';
+  document.getElementById('noResults').classList.toggle('visible', visible === 0);
+}
+
+// Pill click handlers
+document.querySelectorAll('.pill-group').forEach(group => {
+  const filterType = group.getAttribute('data-filter');
+  group.querySelectorAll('.pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      group.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeFilters[filterType] = pill.getAttribute('data-value');
+      applyFilters();
+    });
+  });
+});
+
+// Search
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  activeFilters.search = e.target.value;
+  applyFilters();
+});
+
+// ========== MODAL ==========
+const modalOverlay = document.getElementById('modal');
+const modalInner = document.getElementById('modalInner');
+const modalClose = document.getElementById('modalClose');
+let previousFocus = null;
+
+function openModal(index) {
+  const c = COUNTRIES[index];
+  previousFocus = document.activeElement;
+
+  modalInner.innerHTML = `
+    <div class="modal-header">
+      <img class="modal-flag" src="https://flagcdn.com/w160/${c.country_code}.png" alt="${c.name} flag" width="80" height="60" loading="lazy">
+      <h2 class="modal-country-name">${c.name}</h2>
+      <div class="modal-ease">
+        <span class="ease-label">Visa Ease:</span>
+        ${renderDots(c.ease_rating, 12)}
+        <span style="margin-left:4px;font-size:var(--text-sm);color:var(--color-text-muted);">${c.ease_rating}/5</span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <!-- OVERVIEW -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Overview</h3>
+        <div class="detail-grid">
+          <div class="detail-item"><div class="detail-label">Continent</div><div class="detail-value">${c.continent}</div></div>
+          <div class="detail-item"><div class="detail-label">Language</div><div class="detail-value">${c.language}</div></div>
+          <div class="detail-item"><div class="detail-label">English Level</div><div class="detail-value">${c.english_level}</div></div>
+          <div class="detail-item"><div class="detail-label">Climate</div><div class="detail-value">${c.climate}</div></div>
+          <div class="detail-item"><div class="detail-label">Internet Speed</div><div class="detail-value">${c.internet_speed}</div></div>
+        </div>
+      </div>
+      <!-- VISA -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Visa Pathways</h3>
+        <div class="detail-grid">
+          <div class="detail-item" style="grid-column: 1 / -1;"><div class="detail-label">Visa Types</div><div class="detail-value">${c.main_visa_types}</div></div>
+          <div class="detail-item"><div class="detail-label">Income Requirements</div><div class="detail-value">${c.visa_income_requirements}</div></div>
+          <div class="detail-item"><div class="detail-label">Visa-Free Entry</div><div class="detail-value-lg">${c.visa_free_display}</div></div>
+        </div>
+      </div>
+      <!-- COST -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Cost of Living</h3>
+        <div class="detail-grid">
+          <div class="detail-item"><div class="detail-label">Single, Monthly</div><div class="detail-value-lg">${formatCost(c.cost_single)}</div></div>
+          <div class="detail-item"><div class="detail-label">Couple, Monthly</div><div class="detail-value-lg">${formatCost(c.cost_couple)}</div></div>
+          <div class="detail-item"><div class="detail-label">1BR Rent</div><div class="detail-value-lg">${formatCost(c.rent_1br)}</div></div>
+        </div>
+      </div>
+      <!-- HEALTHCARE -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Healthcare</h3>
+        <div class="detail-grid">
+          <div class="detail-item"><div class="detail-label">Quality</div><div class="detail-value">${c.healthcare_quality}</div></div>
+          <div class="detail-item"><div class="detail-label">Insurance Cost</div><div class="detail-value-lg">${formatCost(c.health_insurance_monthly)}/mo</div></div>
+        </div>
+      </div>
+      <!-- SAFETY -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Safety</h3>
+        <div class="detail-grid">
+          <div class="detail-item" style="grid-column: 1 / -1;"><div class="detail-label">Rating</div><div class="detail-value">${c.safety_rating}</div></div>
+        </div>
+      </div>
+      <!-- PATH FORWARD -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Path Forward</h3>
+        <div class="detail-grid">
+          <div class="detail-item"><div class="detail-label">PR Timeline</div><div class="detail-value">${c.path_to_pr}</div></div>
+          <div class="detail-item"><div class="detail-label">Citizenship Timeline</div><div class="detail-value">${c.path_to_citizenship}</div></div>
+        </div>
+      </div>
+      <!-- TAX -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Tax Considerations</h3>
+        <div class="detail-grid">
+          <div class="detail-item" style="grid-column: 1 / -1;"><div class="detail-label">Benefits & Treaties</div><div class="detail-value">${c.tax_benefits}</div></div>
+        </div>
+      </div>
+      <!-- EXPAT LIFE -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Expat Life</h3>
+        <div class="detail-grid">
+          <div class="detail-item"><div class="detail-label">Community Size</div><div class="detail-value">${c.expat_community_size}</div></div>
+          <div class="detail-item"><div class="detail-label">Top Cities</div><div class="detail-value">${c.expat_cities}</div></div>
+        </div>
+      </div>
+      <!-- PROS & CONS -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Pros & Cons</h3>
+        <div class="pros-cons-grid">
+          <div>
+            <ul class="pros-list">${c.pros.map(p => '<li>' + p + '</li>').join('')}</ul>
+          </div>
+          <div>
+            <ul class="cons-list">${c.cons.map(p => '<li>' + p + '</li>').join('')}</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Add Learn More section
+  const learnMoreHTML = `
+    <div class="modal-body" style="padding-top: 0;">
+      <div class="modal-section learn-more-section">
+        <h3 class="modal-section-title">Learn More</h3>
+        <div class="learn-more-links">
+          <a href="${c.visa_portal_url}" target="_blank" rel="noopener noreferrer" class="learn-more-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <div>
+              <div class="link-label">Official Visa Portal</div>
+              <div class="link-name">${c.visa_portal_name}</div>
+            </div>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="${c.expat_guide_url}" target="_blank" rel="noopener noreferrer" class="learn-more-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            <div>
+              <div class="link-label">Expat Guide</div>
+              <div class="link-name">${c.expat_guide_name}</div>
+            </div>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="${c.us_embassy_url}" target="_blank" rel="noopener noreferrer" class="learn-more-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <div>
+              <div class="link-label">U.S. Embassy</div>
+              <div class="link-name">${c.us_embassy_name}</div>
+            </div>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('modalContent').insertAdjacentHTML('beforeend', learnMoreHTML);
+
+  modalOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Focus the close button
+  requestAnimationFrame(() => {
+    modalClose.focus();
+  });
+}
+
+function closeModal() {
+  modalOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+  if (previousFocus) previousFocus.focus();
+}
+
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
+  if (e.target === modalOverlay) closeModal();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeModal();
+  // Focus trap
+  if (e.key === 'Tab' && modalOverlay.classList.contains('open')) {
+    const focusable = modalOverlay.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+});
+
+// ========== INIT ==========
+renderCards();
+</script>
+</body>
+</html>
